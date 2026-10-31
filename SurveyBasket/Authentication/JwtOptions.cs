@@ -1,0 +1,19 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Bookify.Authentication;
+
+public class JwtOptions
+{
+    public static string SectionName = "Jwt";
+    [Required]
+    public string Key { get; init; } = string.Empty;
+    [Required]
+    public string Issuer { get; init; } = string.Empty;
+    [Required]
+    public string Audience { get; init; } = string.Empty;
+    [Range(5,int.MaxValue)]
+    public int ExpiryMinutes { get; init; }
+    [Range(1, int.MaxValue)]
+    public int RefreshTokenExpiryDays { get; init; }
+    public int RefreshTokenCutoffDays { get; set; }
+}
