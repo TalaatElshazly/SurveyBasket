@@ -22,3 +22,8 @@
 1. Clone the repository:
    ```bash
    git clone [https://github.com/your-username/SurveyBasket.git](https://github.com/your-username/SurveyBasket.git)
+
+Update the database connection string in appsettings.Development.json.
+
+Apply EF Core migrations:
+dotnet ef database update
