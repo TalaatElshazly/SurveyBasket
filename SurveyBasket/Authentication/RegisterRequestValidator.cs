@@ -16,8 +16,7 @@ public class RegisterRequestValidator:AbstractValidator<RegisterRequest>
 
         RuleFor(x => x.UserName)
             .NotEmpty().WithMessage("Username is required.")
-            .MinimumLength(3).WithMessage("Username must be at least 3 characters long.")
-            .WithMessage("This username is already taken.");
+            .MinimumLength(3).WithMessage("Username must be at least 3 characters long.");
 
         RuleFor(x => x.Email)
             .NotEmpty().WithMessage("Email is required.")

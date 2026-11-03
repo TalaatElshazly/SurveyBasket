@@ -36,7 +36,9 @@ public class SecurityAuditService(
             else if (userAgent.Contains("Mac OS")) clientPlatform = "macOS";
             else if (userAgent.Contains("Linux")) clientPlatform = "Linux";
             else clientPlatform = "Other";
-
+        }
+        if (!string.IsNullOrEmpty(userAgent))
+        {
             if (userAgent.Contains("FBAN")
                 || userAgent.Contains("FBAV")
                 || userAgent.Contains("FB_IAB"))
